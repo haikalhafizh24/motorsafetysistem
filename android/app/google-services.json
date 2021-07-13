@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "667858672619",
+    "firebase_url": "https://motorsafetysystem-default-rtdb.firebaseio.com",
+    "project_id": "motorsafetysystem",
+    "storage_bucket": "motorsafetysystem.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:667858672619:android:d74e1f134c37dccbbc17ae",
+        "android_client_info": {
+          "package_name": "com.motorcycle.secrac"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "667858672619-fvrqk62qbneb1qm5a82jasvh2uhn9nhl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDB2M0K9AWr6jwderw5-iFQMTiMA8cTp0U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "667858672619-fvrqk62qbneb1qm5a82jasvh2uhn9nhl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:667858672619:android:c126bfab76e1dbf5bc17ae",
+        "android_client_info": {
+          "package_name": "com.secrac.motorsafetysistem"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "667858672619-fvrqk62qbneb1qm5a82jasvh2uhn9nhl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDB2M0K9AWr6jwderw5-iFQMTiMA8cTp0U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "667858672619-fvrqk62qbneb1qm5a82jasvh2uhn9nhl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
