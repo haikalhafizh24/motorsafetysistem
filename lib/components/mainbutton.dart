@@ -5,70 +5,37 @@ final Telephony telephony = Telephony.instance;
 
 class MainButton extends StatelessWidget {
 
-  double _scale;
-  AnimationController _controller;
-  @override
-  void initState() {
-    _controller = AnimationController(
-      vsync: this,
-      duration: Duration(
-        milliseconds: 500,
-      ),
-      lowerBound: 0.0,
-      upperBound: 0.1,
-    )..addListener(() {
-      setState(() {});
-    });
-    super.initState();
-  }
-  
-  @override
-  void dispose() {
-    super.dispose();
-    _controller.dispose();
-  }
-
-
   const MainButton({
   Key? key,
 
     required this.logo, 
     required this.title, 
-    required this.messageContent, 
     required this.colour,
+    required this.bgColour,
+    required this.txtColour,
+    required this.height,
+    required this.width
 
   }) : super(key: key);
 
-  
-
   final IconData logo;
   final String title;
-  final String messageContent;
   final Color colour;
+  final double height;
+  final double width;
+  final Color bgColour;
+  final Color txtColour;
 
   @override
   Widget build(BuildContext context) {
-    _scale = 1 - _controller.value;
     return Column(
       children: [
-        GestureDetector(
-          onTap:() async {
-              await telephony.sendSms(
-	              to: "089528119353",
-	              message: messageContent,
-              );
-                  },
-          onTapDown: _tapDown,
-          onTapUp: _tapUp,
-          child: Transform.scale(
-            scale: _scale,
-            child: 
             Container(
-              height: 150,
-              width: 150,
+              height: height,
+              width: width,
               decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(30),
+                color: bgColour,
+                borderRadius: BorderRadius.circular(15),
                 boxShadow: [ BoxShadow(
                   color: Colors.black.withOpacity(0.2),
                   blurRadius: 15,
@@ -84,13 +51,13 @@ class MainButton extends StatelessWidget {
                       color: colour,
                     ),
                     SizedBox(
-                      height: 20,
+                      height: 15,
                     ),
                     Text(
                       title,
                       textAlign: TextAlign.center,
                       style: TextStyle(
-                        color: Colors.grey[800],
+                        color: txtColour,
                         fontWeight: FontWeight.w700,
                         fontSize: 20,
                       ),
@@ -98,17 +65,8 @@ class MainButton extends StatelessWidget {
                   ],
                 ),
             ),
-          ),
-        ),
-        ],
-          );
-  }
-
-  void _tapDown(TapDownDetails details) {
-    _controller.forward();
-  }
-
-  void _tapUp(TapUpDetails details) {
-    _controller.reverse();
+        // ),
+      ],
+    );
   }
 }
